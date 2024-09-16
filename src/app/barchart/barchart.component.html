@@ -1,0 +1,11 @@
+<p>barchart works!</p>
+<!-- Display Chart -->
+<div *ngIf="monthlyPayment !== null" class="mt-4">
+    <h4>Monthly Payment: ${{ monthlyPayment | number:'1.2-2' }}</h4>
+
+    <!-- Bar chart -->
+    <div class="mt-4">
+        <canvas baseChart [data]="barChartData" [options]="barChartOptions" [labels]="barChartLabels" chartType="bar">
+        </canvas>
+    </div>
+</div>
